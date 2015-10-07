@@ -1,0 +1,75 @@
+LANGUAGE DIFFERENCES
+=====================
+
+Below are language differences from a version to next version.
+
+//2.21 (goffy)
+modinfo.php:
+define('_MI_CONTACT_HEAD_CAPTCHA', "Options for Captcha");
+define('_MI_CONTACT_FORM_RECAPTCHA_USE', "Use Google reCaptcha?");
+define('_MI_CONTACT_FORM_RECAPTCHA_USE_DESC', "Select <em>Yes</em> to use Google reCaptcha in the submit form.<br />Default: <em>No</em>");
+define('_MI_CONTACT_FORM_RECAPTCHA_KEY', "Your reCaptcha website key");
+define('_MI_CONTACT_FORM_RECAPTCHA_KEY_DESC', "More about Google reCaptcha https://www.google.com/recaptcha <br>and under 'help'.");
+define('_MI_CONTACT_HEAD_DEPT', "Options for usage of departments/recipients");
+define('_MI_CONTACT_HEAD_MISC', "Misc options");
+define('_MI_CONTACT_MAIL_CONFIRM', "Send confirmation mail?");
+define('_MI_CONTACT_MAIL_CONFIRM_DESC', "If yes, a short confirmation mail with the basic information will be sent to given email-address.");
+define('_MI_CONTACT_RECIPIENT_STD', "Standard recipient");
+define('_MI_CONTACT_RECIPIENT_STD_DESC', "Each contact request will be sent to this e-mail-address");
+
+main.php
+define('_MD_CONTACT_MAILCONFIRM_SUBJECT', "Confirmation mail");
+define('_MD_CONTACT_MAILCONFIRM_BODY', "
+Dear {NAME}
+
+We confirm the receipt of your mail
+
+Subject:{SUBJECT}
+Message: 
+{BODY}
+
+We will contact you as soon as possible.
+");
+
+//2.1
+main.php
+define('_MD_CONTACT_SKYPE_NAME', "Skype Name");
+define('_MD_CONTACT_SUBMIT', "Submit");
+define('_MD_CONTACT_NAME_INFO', "Enter name");
+define('_MD_CONTACT_MAIL_INFO', "Enter e-mail");
+define('_MD_CONTACT_URL_INFO', "Enter website");
+define('_MD_CONTACT_COMPANY_INFO', "Enter company");
+define('_MD_CONTACT_ADDRESS_INFO', "Enter address");
+define('_MD_CONTACT_LOCATION_INFO', "Enter city");
+define('_MD_CONTACT_PHONE_INFO', "Enter phone");
+define('_MD_CONTACT_SKYPE_NAME_INFO', "Enter skype name");
+define('_MD_CONTACT_SUBJECT_INFO', "Enter subject");
+define('_MD_CONTACT_MESSAGE_INFO', "Enter message");
+
+mod_info.php
+define('_MI_CONTACT_FORM_SKYPE', "Get skype name");
+define('_MI_CONTACT_FORM_SKYPE_DESC', "");
+
+in file /language/english/admin.php:
+//1.71
+
+// About.php
+define("_AM_CONTACT_ABOUT_RELEASEDATE",              "Released: ");
+define("_AM_CONTACT_ABOUT_UPDATEDATE",               "Updated: ");
+define("_AM_CONTACT_ABOUT_AUTHOR",                   "Author: ");
+define("_AM_CONTACT_ABOUT_CREDITS",                  "Credits: ");
+define("_AM_CONTACT_ABOUT_LICENSE",                  "License: ");
+define("_AM_CONTACT_ABOUT_MODULE_STATUS",            "Status: ");
+define("_AM_CONTACT_ABOUT_WEBSITE",                  "Website: ");
+define("_AM_CONTACT_ABOUT_AUTHOR_NAME",              "Author name: ");
+define("_AM_CONTACT_ABOUT_CHANGELOG",                "Change Log");
+define("_AM_CONTACT_ABOUT_MODULE_INFO",              "Module Infos");
+define("_AM_CONTACT_ABOUT_AUTHOR_INFO",              "Author Infos");
+define("_AM_CONTACT_ABOUT_DESCRIPTION",          "Description: ");
+
+// Configuration
+define("_AM_CONTACT_CONFIG","Configuration Check");
+define("_AM_CONTACT_CONFIG_PHP","Minimum PHP required: %s (your version is %s)");
+define("_AM_CONTACT_CONFIG_XOOPS","Minimum XOOPS required:  %s (your version is %s)");
+// Text for Admin footer
+define("_AM_ADMIN_FOOTER", "<div class='center smallsmall italic pad5'>Contact is maintained by the <a class='tooltip' rel='external' href='http://xoops.org/' title='Visit XOOPS Community'>XOOPS Community</a></div>");

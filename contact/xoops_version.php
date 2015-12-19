@@ -28,7 +28,7 @@ if (!defined('XOOPS_ROOT_PATH')) {
 $moduleDirName = basename(dirname(__FILE__));
 
 $modversion['name']           = _MI_CONTACT_NAME;
-$modversion['version']        = 2.22;
+$modversion['version']        = 2.23;
 $modversion['description']    = _MI_CONTACT_DESC;
 $modversion['credits']        = 'The XOOPS Project, Mohtava Project';
 $modversion['author']         = 'Kazumi Ono (Onokazu), modified by Trabis, rewritten by Voltan, modified by Bleekk, Goffy';
@@ -74,6 +74,29 @@ $modversion['system_menu'] = 1;
 $i                                          = 1;
 $modversion['templates'][$i]['file']        = 'contact_index.html';
 $modversion['templates'][$i]['description'] = '_MI_CONTACT_TEMPLATES';
+
+// Blocks
+$b                                          = 1;
+$modversion['blocks'][$b]['file']        = 'block_contact_form_map.php';
+$modversion['blocks'][$b]['name']        = _MI_B_CONTACT_FORM;
+$modversion['blocks'][$b]['description'] = _MI_B_CONTACT_FORM_DESC;
+$modversion['blocks'][$b]['show_func']   = 'block_contact_form_show';
+$modversion['blocks'][$b]['options']     = '';
+$modversion['blocks'][$b]['template']    = 'block_contact_form.tpl';
+$b++;
+$modversion['blocks'][$b]['file']        = 'block_contact_form_map.php';
+$modversion['blocks'][$b]['name']        = _MI_B_CONTACT_MAP;
+$modversion['blocks'][$b]['description'] = _MI_B_CONTACT_MAP_DESC;
+$modversion['blocks'][$b]['show_func']   = 'block_contact_map_show';
+$modversion['blocks'][$b]['options']     = '';
+$modversion['blocks'][$b]['template']    = 'block_contact_map.tpl';
+$b++;
+$modversion['blocks'][$b]['file']        = 'block_contact_form_map.php';
+$modversion['blocks'][$b]['name']        = _MI_B_CONTACT_FORM_MAP;
+$modversion['blocks'][$b]['description'] = _MI_B_CONTACT_FORM_MAP_DESC;
+$modversion['blocks'][$b]['show_func']   = 'block_contact_form_map_show';
+$modversion['blocks'][$b]['options']     = '';
+$modversion['blocks'][$b]['template']    = 'block_contact_form_map.tpl';
 
 // Settings
 $modversion['config'][] = array(
@@ -233,6 +256,15 @@ $modversion['config'][] = array(
     'name'        => 'contact_info',
     'title'       => '_MI_CONTACT_TOPINFO',
     'description' => '_MI_CONTACT_TOPINFO_DESC',
+    'formtype'    => 'textarea',
+    'valuetype'   => 'text',
+    'default'     => ''
+);
+
+$modversion['config'][] = array(
+    'name'        => 'contact_default',
+    'title'       => '_MI_CONTACT_DEFAULT',
+    'description' => '_MI_CONTACT_DEFAULT_DESC',
     'formtype'    => 'textarea',
     'valuetype'   => 'text',
     'default'     => ''

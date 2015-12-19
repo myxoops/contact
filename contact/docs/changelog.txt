@@ -1,16 +1,28 @@
+Version 2.23 beta 1 NOT RELEASED
+================================
+- created new module preference 'contact_default' (goffy)
+- added new blocks (goffy)
+  -- block for contact form alone
+  -- block for map alone
+  -- block for contact form with map together
+
+Version 2.22 beta 1 NOT RELEASED
+================================
+- fixed: various cleaning the code (goffy)
+
 Version 2.21 beta 1 NOT RELEASED
-=================================
+================================
 - fixed: deleted old module preferences (goffy)
 - created new module preferences for (goffy)
--- reCaptcha
--- standard email adress
+  -- reCaptcha
+  -- standard email adress
 - fixed: various cleaning the code (goffy)
 - restructured module preferences (goffy)
 - added detail help files (en, de) with with detailed instruction for recaptcha and google maps iframe (goffy)
 - added new function to send a confirmation mail to contacting person (goffy)
 
 Version 2.2 beta 1 NOT RELEASED
-=================================
+===============================
 - fixed: every Submitter was Admin (mamba)
 - fixed: department selection was showing email as well (mamba)
 - fixed: with reply, the email was always from the admin, even if there could more admins (mamba)

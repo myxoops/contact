@@ -69,3 +69,14 @@ define('_MI_CONTACT_MAIL_CONFIRM', "Bestätigungsmail senden?");
 define('_MI_CONTACT_MAIL_CONFIRM_DESC', "Wenn ja, wird an die angegebene E-Mail-Adresse eine kurze Bestätigungsmail mit den wichtigsten Informationen gesendet");
 define('_MI_CONTACT_RECIPIENT_STD', "Standardempfänger");
 define('_MI_CONTACT_RECIPIENT_STD_DESC', "An diese E-Mail-Adresse wird jede Kontaktanfrage per Mail gesendet");
+
+//2.23
+define('_MI_B_CONTACT_FORM', "Kontaktformular");
+define('_MI_B_CONTACT_FORM_DESC', "Ein Kontaktformular als Block anzeigen");
+define('_MI_B_CONTACT_MAP', "Standort");
+define('_MI_B_CONTACT_MAP_DESC', "Den definierten Standort in Google Maps als Block anzeigen");
+define('_MI_B_CONTACT_FORM_MAP', "Kontaktformular und Standort");
+define('_MI_B_CONTACT_FORM_MAP_DESC', "Ein Kontaktformular zusammen mit dem Standort in Google Maps als Block anzeigen");
+
+define('_MI_CONTACT_DEFAULT', "Standard-Kontaktdaten");
+define('_MI_CONTACT_DEFAULT_DESC', "Hier können die Kontaktdaten angegeben werden, die zusätzlich zum Formular angezeigt werden sollen (z.B. Name, Adresse , Telefonnummer,...");

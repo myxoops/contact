@@ -25,11 +25,6 @@ $xoopsOption['template_main'] = 'contact_index.html';
 //unset($_SESSION);
 include XOOPS_ROOT_PATH . "/header.php";
 
-global $xoopsConfig, $xoopsOption, $xoopsTpl, $xoopsUser, $xoopsUserIsAdmin, $xoopsLogger;
-
-$department = $contact_handler->Contact_CleanVars($_GET, 'department', '', 'string');
-$obj  = $contact_handler->create();
-
 /*Modules Options*/
 if ($xoopsModuleConfig['form_dept'] == 1) {
     // show a drop down with the correct departments listed
@@ -54,10 +49,11 @@ $xoopsTpl->assign('address', $xoopsModuleConfig['form_address']);
 
 $xoopsTpl->assign('map', $xoopsModuleConfig['embed_maps']);
 /*end Modules options*/
+
 $xoopsTpl->assign('breadcrumb', '<li><a href="' . XOOPS_URL . '">' . _YOURHOME . '</a></li> <li class="active">' . $xoopsModule->name().'</li>');
 $xoopsTpl->assign('info', xoops_getModuleOption('contact_info', 'contact'));
 
-/* added by goffy */
+/* lang vars, added by goffy */
 $xoopsTpl->assign('lng_username', _MD_CONTACT_NAME);
 $xoopsTpl->assign('lng_email', _MD_CONTACT_MAIL);
 $xoopsTpl->assign('lng_url', _MD_CONTACT_URL);

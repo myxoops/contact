@@ -69,3 +69,14 @@ define('_MI_CONTACT_MAIL_CONFIRM', "Send confirmation mail?");
 define('_MI_CONTACT_MAIL_CONFIRM_DESC', "If yes, a short confirmation mail with the basic information will be sent to given email-address.");
 define('_MI_CONTACT_RECIPIENT_STD', "Standard recipient");
 define('_MI_CONTACT_RECIPIENT_STD_DESC', "Each contact request will be sent to this e-mail-address");
+
+//2.23
+define('_MI_B_CONTACT_FORM', "Contact form");
+define('_MI_B_CONTACT_FORM_DESC', "Show contact form as block");
+define('_MI_B_CONTACT_MAP', "Location");
+define('_MI_B_CONTACT_MAP_DESC', "Show defined location in Google Maps as block");
+define('_MI_B_CONTACT_FORM_MAP', "Contact form and location");
+define('_MI_B_CONTACT_FORM_MAP_DESC', "Show contact form together with defined location in Google Maps as block");
+
+define('_MI_CONTACT_DEFAULT', "Default contact info");
+define('_MI_CONTACT_DEFAULT_DESC', "Here you can define additional information, which should be shown beside contact form (e.g name, address , phone number,...");

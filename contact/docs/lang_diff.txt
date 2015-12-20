@@ -3,6 +3,18 @@ LANGUAGE DIFFERENCES
 
 Below are language differences from a version to next version.
 
+//2.23 (goffy)
+modinfo.php:
+define('_MI_B_CONTACT_FORM', "Contact form");
+define('_MI_B_CONTACT_FORM_DESC', "Show contact form as block");
+define('_MI_B_CONTACT_MAP', "Location");
+define('_MI_B_CONTACT_MAP_DESC', "Show defined location in Google Maps as block");
+define('_MI_B_CONTACT_FORM_MAP', "Contact form and location");
+define('_MI_B_CONTACT_FORM_MAP_DESC', "Show contact form together with defined location in Google Maps as block");
+
+define('_MI_CONTACT_DEFAULT', "Default contact info");
+define('_MI_CONTACT_DEFAULT_DESC', "Here you can define additional information, which should be shown beside contact form (e.g name, address , phone number,...");
+
 //2.21 (goffy)
 modinfo.php:
 define('_MI_CONTACT_HEAD_CAPTCHA', "Options for Captcha");

@@ -1,3 +1,7 @@
+Version 2.24 beta 1 NOT RELEASED
+================================
+- fixed bug in template 'contact_index.html' (goffy)
+  
 Version 2.23 beta 1 NOT RELEASED
 ================================
 - created new module preference 'contact_default' (goffy)

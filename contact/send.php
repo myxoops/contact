@@ -66,7 +66,7 @@ if(!$captcha && $xoopsModuleConfig['recaptchause']){
                         exit();
                     }
                 }
-            
+
                 // send mail can send message
                 if ($sendmail = true) {
                     $message = $contact_handler->Contact_SendMail($contact);

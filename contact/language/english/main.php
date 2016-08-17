@@ -12,7 +12,7 @@ define('_MD_CONTACT_ADDRESS', "Address");
 define('_MD_CONTACT_SUBJECT', "Subject");
 define('_MD_CONTACT_MESSAGE', "Comment");
 define('_MD_CONTACT_DEPARTMENT', "Department");
-define('_MD_CONTACT_DEFULTDEP', "Contact us");
+define('_MD_CONTACT_DEFULTDEP', "Default recipient");
 define('_MD_CONTACT_MES_SEND', "Thank you for contacting us");
 define('_MD_CONTACT_MES_NOVALIDEMAIL', "Your Email is not Valid");
 define('_MD_CONTACT_MES_NOTSAVE', "Sorry, your Message was not saved in our DB");

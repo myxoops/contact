@@ -46,10 +46,10 @@ function block_contact_form_map_show($options)
 
 function ContactGetElements (&$block) {
     
-    $modhandler =& xoops_gethandler('module');
-    $xoopsModule =& $modhandler->getByDirname("contact");
-    $config_handler =& xoops_gethandler("config");
-    $xoopsModuleConfig =& $config_handler->getConfigsByCat(0,$xoopsModule->mid());
+    $modhandler        = xoops_gethandler('module');
+    $xoopsModule       = $modhandler->getByDirname("contact");
+    $config_handler    = xoops_gethandler("config");
+    $xoopsModuleConfig = $config_handler->getConfigsByCat(0,$xoopsModule->mid());
 
     xoops_loadLanguage('main', 'contact');
     

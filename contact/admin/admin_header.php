@@ -43,4 +43,4 @@ require_once $pathModuleAdmin . '/moduleadmin/moduleadmin.php';
 $admin_class = new ModuleAdmin();
 
 // Contact Handler
-$contact_handler = & xoops_getModuleHandler('contact', 'contact');
+$contact_handler = xoops_getModuleHandler('contact', 'contact');

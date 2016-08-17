@@ -30,7 +30,7 @@ class contact extends XoopsObject
 
     public function __construct()
     {
-        $this->XoopsObject();
+        // $this->XoopsObject();
         $this->initVar("contact_id", XOBJ_DTYPE_INT, null, false, 11);
         $this->initVar("contact_uid", XOBJ_DTYPE_INT, null, false, 11);
         $this->initVar("contact_cid", XOBJ_DTYPE_INT, null, false, 11);
@@ -177,6 +177,7 @@ class ContactContactHandler extends XoopsPersistableObjectHandler
         $contact['contact_address']    = $this->Contact_CleanVars($_POST, 'contact_address', '', 'text');
         $contact['contact_platform']   = $this->Contact_CleanVars($_POST, 'contact_platform', 'Web', 'platform');
         $contact['contact_type']       = $this->Contact_CleanVars($_POST, 'contact_type', 'Contact', 'type');
+        $contact['contact_reply']      = $this->Contact_CleanVars($_POST, 'contact_reply', '0', 'int');
         
         return $contact;
         

@@ -1,3 +1,8 @@
+Version 2.25 beta 1 NOT RELEASED
+================================
+- fixed notices php7 (goffy)
+- updated for xoops 2.5.8 (goffy)
+
 Version 2.24 beta 1 NOT RELEASED
 ================================
 - fixed bug in template 'contact_index.html' (goffy)
@@ -17,7 +22,7 @@ Version 2.22 beta 1 NOT RELEASED
 Version 2.21 beta 1 NOT RELEASED
 ================================
 - fixed: deleted old module preferences (goffy)
-- created new module preferences for (goffy)
+- created new module preferences for (goffy, bleek)
   -- reCaptcha
   -- standard email adress
 - fixed: various cleaning the code (goffy)

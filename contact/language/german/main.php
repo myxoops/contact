@@ -12,7 +12,7 @@ define('_MD_CONTACT_ADDRESS', "Adresse");
 define('_MD_CONTACT_SUBJECT', "Betreff");
 define('_MD_CONTACT_MESSAGE', "Nachricht");
 define('_MD_CONTACT_DEPARTMENT', "Abteilung");
-define('_MD_CONTACT_DEFULTDEP', "Kontaktieren");
+define('_MD_CONTACT_DEFULTDEP', "Standardempfänger");
 define('_MD_CONTACT_MES_SEND', "Danke für Ihre Anfrage");
 define('_MD_CONTACT_MES_NOVALIDEMAIL', "Die E-Mail Adresse ist ungültig");
 define('_MD_CONTACT_MES_NOTSAVE', "Die Nachricht wurde nicht in der Datenbank gespeichert");

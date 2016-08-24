@@ -17,46 +17,62 @@
  * @since           1.0
  * @min_xoops       2.5.7
  * @author          Goffy (wedega.com) - Email:<webmaster@wedega.com> - Website:<http://wedega.com>
- * @version         $Id: 1.0 versions.php 1 Sun 2015/03/08 17:12:07Z Goffy / wedega.com / XOOPS Development Team $
+ * @param $options
+ * @return array
  */
 
 // Function show block form only
-function block_contact_form_show($options) 
+function block_contact_form_show($options)
 {
     $block = array();
-    ContactGetElements ($block);
-	return $block;
+    ContactGetElements($block);
+
+    return $block;
 }
 
 // Function show block map
-function block_contact_map_show($options) 
+/**
+ * @param $options
+ * @return array
+ */
+function block_contact_map_show($options)
 {
     $block = array();
-    ContactGetElements ($block);
-	return $block;
+    ContactGetElements($block);
+
+    return $block;
 }
 
 // Function show block form and map
-function block_contact_form_map_show($options) 
+/**
+ * @param $options
+ * @return array
+ */
+function block_contact_form_map_show($options)
 {
     $block = array();
-    ContactGetElements ($block);
-	return $block;
+    ContactGetElements($block);
+
+    return $block;
 }
 
-function ContactGetElements (&$block) {
-    
-    $modhandler        = xoops_gethandler('module');
-    $xoopsModule       = $modhandler->getByDirname("contact");
-    $config_handler    = xoops_gethandler("config");
-    $xoopsModuleConfig = $config_handler->getConfigsByCat(0,$xoopsModule->mid());
+/**
+ * @param $block
+ */
+function ContactGetElements(&$block)
+{
+    /** @var XoopsModuleHandler $moduleHandler */
+    $moduleHandler = xoops_getHandler('module');
+    $xoopsModule   = $moduleHandler->getByDirname('contact');
+    /** @var XoopsConfigHandler $configHandler */
+    $configHandler     = xoops_getHandler('config');
+    $xoopsModuleConfig = $configHandler->getConfigsByCat(0, $xoopsModule->mid());
 
     xoops_loadLanguage('main', 'contact');
-    
-    include_once XOOPS_ROOT_PATH.'/modules/contact/class/contact.php';
-    
-    
-    $block["lng_username"] = "name";
+
+    include_once XOOPS_ROOT_PATH . '/modules/contact/class/contact.php';
+
+    $block['lng_username'] = 'name';
 
     /*Modules Options*/
     if ($xoopsModuleConfig['form_dept'] == 1) {
@@ -67,47 +83,47 @@ function ContactGetElements (&$block) {
             list($name, $email) = explode(',', $val, 2); //split the name and email
             array_push($departmentlist, $name);
         }
-        $block['depart'] = $xoopsModuleConfig['form_dept'];
+        $block['depart']      = $xoopsModuleConfig['form_dept'];
         $block['departments'] = $departmentlist;
     }
-    $block['recaptcha'] = $xoopsModuleConfig['recaptchause'];
-    $block['recaptchakey'] = $xoopsModuleConfig['recaptchakey'];
-    $block['url'] = $xoopsModuleConfig['form_url'];
-    $block['icq'] = $xoopsModuleConfig['form_icq'];
-    $block['skype'] = $xoopsModuleConfig['form_skype'];
-    $block['company'] = $xoopsModuleConfig['form_company'];
-    $block['location'] = $xoopsModuleConfig['form_location'];
-    $block['phone'] = $xoopsModuleConfig['form_phone'];
-    $block['address'] = $xoopsModuleConfig['form_address'];
-	$block['info'] = $xoopsModuleConfig['contact_info'];
-	$block['contact_default'] = $xoopsModuleConfig['contact_default'];
-    $block['map'] = $xoopsModuleConfig['embed_maps'];
+    $block['recaptcha']       = $xoopsModuleConfig['recaptchause'];
+    $block['recaptchakey']    = $xoopsModuleConfig['recaptchakey'];
+    $block['url']             = $xoopsModuleConfig['form_url'];
+    $block['icq']             = $xoopsModuleConfig['form_icq'];
+    $block['skype']           = $xoopsModuleConfig['form_skype'];
+    $block['company']         = $xoopsModuleConfig['form_company'];
+    $block['location']        = $xoopsModuleConfig['form_location'];
+    $block['phone']           = $xoopsModuleConfig['form_phone'];
+    $block['address']         = $xoopsModuleConfig['form_address'];
+    $block['info']            = $xoopsModuleConfig['contact_info'];
+    $block['contact_default'] = $xoopsModuleConfig['contact_default'];
+    $block['map']             = $xoopsModuleConfig['embed_maps'];
     /*end Modules options*/
 
     /* get language vars*/
-    $block['lng_username'] = _MD_CONTACT_NAME;
-    $block['lng_email'] = _MD_CONTACT_MAIL;
-    $block['lng_url'] = _MD_CONTACT_URL;
-    $block['lng_company'] = _MD_CONTACT_COMPANY;
-    $block['lng_icq'] = _MD_CONTACT_ICQ_NAME;
-    $block['lng_address'] = _MD_CONTACT_ADDRESS;
-    $block['lng_location'] = _MD_CONTACT_LOCATION;
-    $block['lng_phone'] = _MD_CONTACT_PHONE;
-    $block['lng_skypename'] = _MD_CONTACT_SKYPE_NAME;
+    $block['lng_username']   = _MD_CONTACT_NAME;
+    $block['lng_email']      = _MD_CONTACT_MAIL;
+    $block['lng_url']        = _MD_CONTACT_URL;
+    $block['lng_company']    = _MD_CONTACT_COMPANY;
+    $block['lng_icq']        = _MD_CONTACT_ICQ_NAME;
+    $block['lng_address']    = _MD_CONTACT_ADDRESS;
+    $block['lng_location']   = _MD_CONTACT_LOCATION;
+    $block['lng_phone']      = _MD_CONTACT_PHONE;
+    $block['lng_skypename']  = _MD_CONTACT_SKYPE_NAME;
     $block['lng_department'] = _MD_CONTACT_DEPARTMENT;
-    $block['lng_subject'] = _MD_CONTACT_SUBJECT;
-    $block['lng_message'] = _MD_CONTACT_MESSAGE;
-    $block['lng_submit'] = _MD_CONTACT_SUBMIT;
+    $block['lng_subject']    = _MD_CONTACT_SUBJECT;
+    $block['lng_message']    = _MD_CONTACT_MESSAGE;
+    $block['lng_submit']     = _MD_CONTACT_SUBMIT;
 
-    $block['lng_username_info'] = _MD_CONTACT_NAME_INFO;
-    $block['lng_email_info'] = _MD_CONTACT_MAIL_INFO;
-    $block['lng_url_info'] = _MD_CONTACT_URL_INFO;
-    $block['lng_company_info'] = _MD_CONTACT_COMPANY_INFO;
-    $block['lng_address_info'] = _MD_CONTACT_ADDRESS_INFO;
-    $block['lng_location_info'] = _MD_CONTACT_LOCATION_INFO;
-    $block['lng_phone_info'] = _MD_CONTACT_PHONE_INFO;
-    $block['lng_icq_info'] = _MD_CONTACT_ICQ_INFO;
+    $block['lng_username_info']  = _MD_CONTACT_NAME_INFO;
+    $block['lng_email_info']     = _MD_CONTACT_MAIL_INFO;
+    $block['lng_url_info']       = _MD_CONTACT_URL_INFO;
+    $block['lng_company_info']   = _MD_CONTACT_COMPANY_INFO;
+    $block['lng_address_info']   = _MD_CONTACT_ADDRESS_INFO;
+    $block['lng_location_info']  = _MD_CONTACT_LOCATION_INFO;
+    $block['lng_phone_info']     = _MD_CONTACT_PHONE_INFO;
+    $block['lng_icq_info']       = _MD_CONTACT_ICQ_INFO;
     $block['lng_skypename_info'] = _MD_CONTACT_SKYPE_NAME_INFO;
-    $block['lng_subject_info'] = _MD_CONTACT_SUBJECT_INFO;
-    $block['lng_message_info'] = _MD_CONTACT_MESSAGE_INFO;
+    $block['lng_subject_info']   = _MD_CONTACT_SUBJECT_INFO;
+    $block['lng_message_info']   = _MD_CONTACT_MESSAGE_INFO;
 }

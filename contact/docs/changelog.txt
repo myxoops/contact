@@ -22,6 +22,13 @@
 - changed $hModule->getByDirname to static call $hModule::getByDirname (mamba)
 - updated deprecated HTML to CSS (mamba)
 - removed exit(); redirect_header has it already (mamba)
+- renamed /admin/contact.php to main.php (mamba)
+- renamed contact_slogo.png to logoModule.png (mamba)
+- updated min XOOPS (2.5.8), admin (1.2),and PHP (5.5) (mamba)
+- added info about reCaptcha testing key (mamba)
+- replaced "or die" with "|| exit" (mamba)
+- removed "Version" in changelog (mamba)
+- added strict boolean comparison (mamba)
 
 2.25 beta 1 NOT RELEASED
 ================================

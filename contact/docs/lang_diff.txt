@@ -3,6 +3,10 @@ LANGUAGE DIFFERENCES
 
 Below are language differences from a version to next version.
 
+//2.25 (mamba)
+admin.php
+define('_AM_CONTACT_CANTREPLY', 'Can not reply');
+
 //2.23 (goffy)
 modinfo.php:
 define('_MI_B_CONTACT_FORM', "Contact form");

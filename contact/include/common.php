@@ -17,23 +17,22 @@
  * @since           1.0
  * @min_xoops       2.5.7
  * @author          Goffy (xoops.wedega.com) - Email:<webmaster@wedega.com> - Website:<http://xoops.wedega.com>
- * @version         $Id: 1.0 common.php 1 Fri 2015/02/20 12:43:29Z Goffy / wedega.com / XOOPS Development Team $
  */
-defined('XOOPS_ROOT_PATH') or die('Restricted access');
+defined('XOOPS_ROOT_PATH') || exit('Restricted access');
 if (!defined('CONTACT_MODULE_PATH')) {
-	define('CONTACT_DIRNAME', basename(dirname(dirname( __FILE__ ))));
-	define('CONTACT_PATH', XOOPS_ROOT_PATH.'/modules/'.CONTACT_DIRNAME);
-	define('CONTACT_URL', XOOPS_URL.'/modules/'.CONTACT_DIRNAME);	
-	define('CONTACT_UPLOAD_PATH', XOOPS_UPLOAD_PATH.'/'.CONTACT_DIRNAME);
-	define('CONTACT_UPLOAD_URL', XOOPS_UPLOAD_URL.'/'.CONTACT_DIRNAME);
-	define('CONTACT_IMAGE_PATH', CONTACT_PATH.'/assets/images');
-	define('CONTACT_IMAGE_URL', CONTACT_URL.'/assets/images/');
-	define('CONTACT_ADMIN', CONTACT_URL . '/admin/index.php');
+    define('CONTACT_DIRNAME', basename(dirname(__DIR__)));
+    define('CONTACT_PATH', XOOPS_ROOT_PATH.'/modules/'.CONTACT_DIRNAME);
+    define('CONTACT_URL', XOOPS_URL.'/modules/'.CONTACT_DIRNAME);
+    define('CONTACT_UPLOAD_PATH', XOOPS_UPLOAD_PATH.'/'.CONTACT_DIRNAME);
+    define('CONTACT_UPLOAD_URL', XOOPS_UPLOAD_URL.'/'.CONTACT_DIRNAME);
+    define('CONTACT_IMAGE_PATH', CONTACT_PATH.'/assets/images');
+    define('CONTACT_IMAGE_URL', CONTACT_URL.'/assets/images/');
+    define('CONTACT_ADMIN', CONTACT_URL . '/admin/index.php');
 }
 // module information
 $copyright = "<a href='http://xoops.wedega.com' title='WEDEGA Webdesign Gabor' target='_blank'>
-                     <img src='".$local_logo."' alt='WEDEGA Webdesign Gabor' /></a>";
-					 
+                     <img src='". $local_logo."' alt='WEDEGA Webdesign Gabor' /></a>";
+                     
 include_once XOOPS_ROOT_PATH.'/class/xoopsrequest.php';
 include_once CONTACT_PATH.'/class/helper.php';
 include_once CONTACT_PATH.'/include/functions.php';

@@ -210,7 +210,7 @@ class ContactContactHandler extends XoopsPersistableObjectHandler
      */
     public function contactSendMail($contact)
     {
-        $xoopsMailer =& xoops_getMailer();
+        $xoopsMailer = xoops_getMailer();
         $xoopsMailer->useMail();
         $xoopsMailer->setToEmails($this->contactToEmails($contact['contact_department']));
         $xoopsMailer->setFromEmail($contact['contact_mail']);
@@ -237,7 +237,7 @@ class ContactContactHandler extends XoopsPersistableObjectHandler
      */
     public function contactSendMailConfirm($contact)
     {
-        $xoopsMailer =& xoops_getMailer();
+        $xoopsMailer = xoops_getMailer();
         $xoopsMailer->useMail();
         $xoopsMailer->setToEmails($contact['contact_mail']);
         $xoopsMailer->setFromEmail($this->contactToEmails($contact['contact_department']));
@@ -263,7 +263,7 @@ class ContactContactHandler extends XoopsPersistableObjectHandler
      */
     public function contactReplyMail($contact)
     {
-        $xoopsMailer =& xoops_getMailer();
+        $xoopsMailer = xoops_getMailer();
         $xoopsMailer->useMail();
         $xoopsMailer->setToEmails($contact['contact_mailto']);
         $xoopsMailer->setFromEmail($contact['contact_mail']);
@@ -324,7 +324,7 @@ class ContactContactHandler extends XoopsPersistableObjectHandler
         $criteria = new CriteriaCompo();
         $criteria->add(new Criteria('contact_cid', $contact_id));
         $criteria->add(new Criteria('contact_type', 'Contact'));
-        $contacts =& $this->getObjects($criteria, false);
+        $contacts = $this->getObjects($criteria, false);
         if ($contacts) {
             $ret = array();
             /** @var Contact $root */
@@ -357,7 +357,7 @@ class ContactContactHandler extends XoopsPersistableObjectHandler
         $criteria->setOrder($contact['order']);
         $criteria->setStart($contact['start']);
         $criteria->setLimit($contact['limit']);
-        $contacts =& $this->getObjects($criteria, false);
+        $contacts = $this->getObjects($criteria, false);
         if ($contacts) {
             /** @var Contact $root */
             foreach ($contacts as $root) {
@@ -497,7 +497,7 @@ class ContactContactHandler extends XoopsPersistableObjectHandler
         }
         $criteria->setSort('contact_create');
         $criteria->setOrder('DESC');
-        $contacts =& $this->getObjects($criteria, false);
+        $contacts = $this->getObjects($criteria, false);
         if ($contacts) {
             /** @var Contact $root */
             foreach ($contacts as $root) {

@@ -171,7 +171,7 @@ class ContactContactHandler extends XoopsPersistableObjectHandler
         $contact['contact_company']    = $this->Contact_CleanVars($_POST, 'contact_company', '', 'text'); //mb changed from string to text
         $contact['contact_location']   = $this->Contact_CleanVars($_POST, 'contact_location', '', 'text');
         $contact['contact_phone']      = $this->Contact_CleanVars($_POST, 'contact_phone', '', 'int');
-        $contact['contact_department'] = $this->Contact_CleanVars($_POST, 'contact_department', _MD_CONTACT_DEFULTDEP, 'string');
+        $contact['contact_department'] = $this->Contact_CleanVars($_POST, 'contact_department', xoops_getModuleOption('contact_recipient_std', 'contact'), 'string');
         $contact['contact_ip']         = getenv("REMOTE_ADDR");
         $contact['contact_message']    = $this->Contact_CleanVars($_POST, 'contact_message', '', 'text');
         $contact['contact_address']    = $this->Contact_CleanVars($_POST, 'contact_address', '', 'text');

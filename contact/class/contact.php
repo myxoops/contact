@@ -193,7 +193,7 @@ class ContactContactHandler extends XoopsPersistableObjectHandler
         $contact['contact_company']    = XoopsRequest::getString('contact_company', '', 'POST');
         $contact['contact_location']   = XoopsRequest::getString('contact_location', '', 'POST');
         $contact['contact_phone']      = XoopsRequest::getString('contact_phone', '', 'int');
-        $contact['contact_department'] = XoopsRequest::getString('contact_department', _MD_CONTACT_DEFULTDEP, 'POST');
+        $contact['contact_department'] = XoopsRequest::getString('contact_department', xoops_getModuleOption('contact_recipient_std', 'contact'), 'POST');
         $contact['contact_ip']         = getenv('REMOTE_ADDR');
         $contact['contact_message']    = XoopsRequest::getText('contact_message', '', 'POST');
         $contact['contact_address']    = XoopsRequest::getString('contact_address', '', 'POST');
@@ -240,7 +240,7 @@ class ContactContactHandler extends XoopsPersistableObjectHandler
         $xoopsMailer = xoops_getMailer();
         $xoopsMailer->useMail();
         $xoopsMailer->setToEmails($contact['contact_mail']);
-        $xoopsMailer->setFromEmail($this->contactToEmails($contact['contact_department']));
+        $xoopsMailer->setFromEmail(xoops_getModuleOption('contact_recipient_std', 'contact'));
         $xoopsMailer->setFromName(html_entity_decode($GLOBALS['xoopsConfig']['sitename'], ENT_QUOTES, 'UTF-8'));
 
         $xoopsMailer->setSubject(_MD_CONTACT_MAILCONFIRM_SUBJECT);
@@ -285,8 +285,6 @@ class ContactContactHandler extends XoopsPersistableObjectHandler
      */
     public function contactToEmails($department = null)
     {
-//        global $xoopsConfig;
-        $department_mail[] = xoops_getModuleOption('contact_recipient_std', 'contact');
         if (!empty($department)) {
             $departments = xoops_getModuleOption('contact_dept', 'contact');
             foreach ($departments as $vals) {
@@ -296,7 +294,10 @@ class ContactContactHandler extends XoopsPersistableObjectHandler
                 }
             }
         }
-
+        if (0 == count($department_mail)) {
+            $department_mail[] = xoops_getModuleOption('contact_recipient_std', 'contact');
+        }
+		
         return $department_mail;
     }
 

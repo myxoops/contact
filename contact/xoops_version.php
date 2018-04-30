@@ -50,8 +50,8 @@ $modversion['tables'][0]        = 'contact';
 //about
 $modversion['module_website_url']  = 'http://www.xoops.org/';
 $modversion['module_website_name'] = 'XOOPS';
-$modversion['release_date']        = '2016/08/23';
-$modversion['module_status']       = 'Beta 2';
+$modversion['release_date']        = '2018/04/30';
+$modversion['module_status']       = 'RC1';
 $modversion['author_website_url']  = 'http://www.xoops.org/';
 $modversion['author_website_name'] = 'XOOPS';
 $modversion['min_php']             = '5.5';

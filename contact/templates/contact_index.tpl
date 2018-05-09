@@ -14,10 +14,13 @@
 </div>
 <{/if}>
 
-<{if $map}>
-<div class="col-md-6 col-sm-12 bg-contact">
-<{elseif !$map}>
-<div class="col-sm-12 bg-contact">
+<{if $default}>
+<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 bg-contact">
+	<{$default}>
+</div>
+<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 bg-contact">
+<{else}>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bg-contact">
 <{/if}>
 	<form name="save" id="save" action="<{xoAppUrl}>modules/contact/send.php" onsubmit="return xoopsFormValidate_save();" method="post" enctype="multipart/form-data">
 		<div class="form-group">
@@ -103,7 +106,7 @@
 
 	</div>
 <{if $map}>
-	<div class="col-md-6 col-sm-12 bg-contact">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bg-contact">
 		<{$map}>
 	</div>
 <{/if}>

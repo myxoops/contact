@@ -1,3 +1,7 @@
+2.25 final
+================================
+- changed template for display default contact data (goffy)
+
 2.25 beta 2 NOT RELEASED
 ================================
 - removed @version (mamba)

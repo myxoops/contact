@@ -51,6 +51,7 @@ $GLOBALS['xoopsTpl']->assign('map', $xoopsModuleConfig['embed_maps']);
 
 $GLOBALS['xoopsTpl']->assign('breadcrumb', '<li><a href="' . XOOPS_URL . '">' . _YOURHOME . '</a></li> <li class="active">' . $xoopsModule->name().'</li>');
 $GLOBALS['xoopsTpl']->assign('info', xoops_getModuleOption('contact_info', 'contact'));
+$GLOBALS['xoopsTpl']->assign('default', xoops_getModuleOption('contact_default', 'contact'));
 
 /* lang vars, added by goffy */
 $GLOBALS['xoopsTpl']->assign('lng_username', _MD_CONTACT_NAME);
